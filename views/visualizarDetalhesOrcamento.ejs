@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- meta charset -->
+    <meta charset="utf-8">
+    <!-- site title -->
+    <title>Stone Orçamentos</title>
+    <!-- meta description -->
+    <meta name="description" content="">
+    <!-- mobile viwport meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fevicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- ================================
+        CSS Files
+        ================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/system/css/themefisher-fonts.min.css">
+    <link rel="stylesheet" href="/system/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/system/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/system/css/main.css">
+    <link id="color-changer" rel="stylesheet" href="/system/css/colors/color-0.css">
+
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+    </div>
+
+    <main class="site-wrapper">
+        <div class="pt-table">
+            <div class="pt-tablecell page-works relative">
+                <!-- .close -->
+                <a href="/orcamento/listaOrcamento" class="page-close"><i class="tf-ion-close"></i></a>
+                <!-- /.close -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                            <div class="page-title text-center">
+                                <h2>Meus<span class="primary">Orçamentos</span> <span class="title-bg">Stone</span></h2>
+                                <p>Orçamentos</p>
+                            </div>
+                        </div>
+                    </div> <!-- /.row -->
+
+                    <div class="card">
+                        <h4 class="card-header">Visualização do orçamento da data
+                            <%=moment(orcamento.date).format("DD-MM-YYYY")%> - Código: <%=orcamento._id%></h4>
+                        <div class="card-body">
+                            <div class="card" style="width:100%;">
+                                <div class="card-header">
+                                   Dados do orçamento
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Nome: <%=orcamento.nome%>
+                                    </li>
+                                    <li class="list-group-item">CPF: <%=orcamento.cpf%></li>
+                                    <li class="list-group-item">Tipo de pessoa: <%=orcamento.tipodepessoa%></li>
+                                    <li class="list-group-item">Telefone: <%=orcamento.telefone%></li>
+                                    <li class="list-group-item">CEP: <%=orcamento.cep%></li>
+                                    <li class="list-group-item">Endereço: <%=orcamento.endereco%>,
+                                        <%=orcamento.numero%>, <%=orcamento.bairro%>, <%=orcamento.cidade%> -
+                                        <%=orcamento.estado%></li>
+                                       
+                                        <li class="list-group-item">Total: <%=orcamento.total%></li>
+                                        <li class="list-group-item">
+                                        <strong> Validade do orçamento após 15 dias da data de emissão </strong>
+                                        </li>
+                                </ul>
+                                </div>
+                                
+                            </div>
+                            
+                           
+
+                        </div>   
+                        
+                </div> <!-- /.pt-tablecell -->
+            </div> <!-- /.pt-table -->
+    </main> <!-- /.site-wrapper -->
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(
+                        value) > -1)
+                });
+            });
+        });
+    </script>
+    <!-- ================================
+        JavaScript Libraries
+        ================================= -->
+    <script src="/system/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/system/js/vendor/bootstrap.min.js"></script>
+    <script src="/system/js/jquery.easing.min.js"></script>
+    <script src="/system/js/isotope.pkgd.min.js"></script>
+    <script src="/system/js/jquery.nicescroll.min.js"></script>
+    <script src="/system/js/owl.carousel.min.js"></script>
+    <script src="/system/js/jquery-validation.min.js"></script>
+    <script src="/system/js/form.min.js"></script>
+    <script src="/system/js/main.js"></script>
+</body>
+
+</html>

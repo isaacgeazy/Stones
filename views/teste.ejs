@@ -1,0 +1,355 @@
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+          <div class="page-title text-center">
+              <h2>Minhas <span class="primary">Despesas</span> <span class="title-bg">Stone</span>
+              </h2>
+              <p>Insira aqui suas despesas e tenha um controle dos gastos.</p>
+          </div>
+      </div>
+  </div> <!-- /.row -->
+
+
+
+
+      <div class="col">
+          <div class="card">
+              <div class="card-body">
+                  <div class="col-md-8">
+
+                      <label class="form-label">Total</label>
+                      <input type="text" class="form-control" id="resultado">
+                      <br>
+
+                      <button type="button" class="btn btn-warning" id="somar">Calcular</button>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-header">
+                              Mármores e granitos
+                          </div>
+                          <div class="card-body">
+
+                              <div class="col-md-4">
+
+                                  <label class="form-label">Largura</label>
+                                  <input type="text" class="form-control" id="somaMarmore1"
+                                      autocomplete="off" autocomplete="off" value="" name=""
+                                      placeholder="" maxlength="6">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustom02"
+                                      class="form-label">Comprimento</label>
+                                  <input type="text" class="form-control" id="somaMarmore2">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustomUsername" class="form-label">Preço do
+                                      item</label>
+                                  <input type="text" class="form-control" id="somaMarmore3">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="" class="form-label">Resultado</label>
+                                  <input type="text" class="form-control form-control-lg"
+                                      id="resultMarmore" autocomplete="off" autocomplete="off" name=""
+                                      placeholder="0,00" maxlength="6"
+                                      onKeyPress="return(moeda(this,'.',',',event))">
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-header">
+                              Mão de obra
+                          </div>
+                          <div class="card-body">
+
+                              <div class="col-md-4">
+
+                                  <label class="form-label">Largura</label>
+                                  <input type="text" class="form-control" id="somaMobra1">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustom02"
+                                      class="form-label">Comprimento</label>
+                                  <input type="text" class="form-control" id="somaMobra2">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustomUsername" class="form-label">Preço do
+                                      item</label>
+                                  <input type="text" class="form-control" id="somaMobra3">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustomUsername"
+                                      class="form-label">Resultado</label>
+                                  <input type="text" class="form-control form-control-lg"
+                                      id="resultMobra">
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-header">
+                              Acabamento
+                          </div>
+                          <div class="card-body">
+
+                              <div class="col-md-4">
+
+                                  <label class="form-label">Largura</label>
+                                  <input type="text" class="form-control" id="somaAcab1">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustom02"
+                                      class="form-label">Comprimento</label>
+                                  <input type="text" class="form-control" id="somaAcab2">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustomUsername" class="form-label">Preço do
+                                      item</label>
+                                  <input type="text" class="form-control" id="somaAcab3">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustomUsername"
+                                      class="form-label">Resultado</label>
+                                  <input type="text" class="form-control form-control-lg"
+                                      id="resultAcab">
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-header">
+                              Produto
+                          </div>
+                          <div class="card-body">
+
+                              <div class="col-md-4">
+
+                                  <label class="form-label">Largura</label>
+                                  <select name="" id="">Selecione aqui</select>
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustom02" class="form-label">Altura</label>
+                                  <input type="text" class="form-control form-control-lg" id="prod">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-header">
+                              Cuba
+                          </div>
+                          <div class="card-body">
+
+                              <div class="col-md-4">
+                                  <label for="validationCustomUsername" class="form-label">Preço do
+                                      item</label>
+                                  <input type="text" class="form-control"
+                                      id="validationCustomUsername">
+
+                              </div>
+                              <div class="col-md-4">
+                                  <label for="validationCustomUsername"
+                                      class="form-label">Resultado</label>
+                                  <input type="text" class="form-control form-control-lg" id="cuba">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+</body>
+
+</html>
+
+</div> <!-- /.pt-tablecell -->
+</div> <!-- /.pt-table -->
+</main> <!-- /.site-wrapper -->
+
+<!-- ================================
+JavaScript Libraries
+================================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function () {
+jQuery('input').on('keyup', function () {
+if (jQuery(this).attr('name') === 'result') {
+return false;
+}
+
+/* ####### troca virgula por ponto ############# */
+$('input[type="text"]').each(function () {
+var val = $(this).val().replace(',', '.');
+$(this).val(val);
+});
+/* ############################################# */
+
+var somaMarmore1 = (jQuery('#somaMarmore1').val() == '' ? 0 : jQuery('#somaMarmore1')
+.val());
+var somaMarmore2 = (jQuery('#somaMarmore2').val() == '' ? 0 : jQuery('#somaMarmore2')
+.val());
+var somaMarmore3 = (jQuery('#somaMarmore3').val() == '' ? 0 : jQuery('#somaMarmore3')
+.val());
+
+// use prseFloat 
+var resultMarmore = ((((parseFloat(somaMarmore1) * parseFloat(somaMarmore2)))) * parseFloat(somaMarmore3));
+
+jQuery('#resultMarmore').val(parseFloat(resultMarmore).toFixed(2));
+});
+});
+
+
+/* Mão de obra */
+jQuery(document).ready(function () {
+jQuery('input').on('keyup', function () {
+if (jQuery(this).attr('name1') === 'result1') {
+return false;
+}
+
+/* ####### troca virgula por ponto ############# */
+$('input[type="text"]').each(function () {
+var val = $(this).val().replace(',', '.');
+$(this).val(val);
+});
+/* ############################################# */
+
+var somaMobra1 = (jQuery('#somaMobra1').val() == '' ? 0 : jQuery('#somaMobra1')
+.val());
+var somaMobra2 = (jQuery('#somaMobra2').val() == '' ? 0 : jQuery('#somaMobra2')
+.val());
+var somaMobra3 = (jQuery('#somaMobra3').val() == '' ? 0 : jQuery('#somaMobra3')
+.val());
+
+// use prseFloat 
+var resultMobra = ((((parseFloat(somaMobra1) + parseFloat(somaMobra2)))) * parseFloat(somaMobra3));
+
+jQuery('#resultMobra').val(parseFloat(resultMobra).toFixed(2));
+});
+});
+
+/* Acabamento */
+jQuery(document).ready(function () {
+jQuery('input').on('keyup', function () {
+if (jQuery(this).attr('name2') === 'result2') {
+return false;
+}
+
+/* ####### troca virgula por ponto ############# */
+$('input[type="text"]').each(function () {
+var val = $(this).val().replace(',', '.');
+$(this).val(val);
+});
+/* ############################################# */
+
+var somaAcab1 = (jQuery('#somaAcab1').val() == '' ? 0 : jQuery('#somaAcab1')
+.val());
+var somaAcab2 = (jQuery('#somaAcab2').val() == '' ? 0 : jQuery('#somaAcab2')
+.val());
+var somaAcab3 = (jQuery('#somaAcab3').val() == '' ? 0 : jQuery('#somaAcab3')
+.val());
+
+// use prseFloat 
+var resultAcab = ((((parseFloat(somaAcab1) + parseFloat(somaAcab2)))) * parseFloat(somaAcab3));
+
+jQuery('#resultAcab').val(parseFloat(resultAcab).toFixed(2));
+});
+});
+
+/*Produto*/
+jQuery(document).ready(function () {
+jQuery('input').on('keyup', function () {
+if (jQuery(this).attr('name3') === 'result3') {
+return false;
+}
+
+/* ####### troca virgula por ponto ############# */
+$('input[type="text"]').each(function () {
+var val = $(this).val().replace(',', '.');
+$(this).val(val);
+});
+/* ############################################# */
+
+var produto = (jQuery('#prod').val() == '' ? 0 : jQuery('#prod')
+.val());
+
+
+// use parseFloat 
+var resultProd = parseFloat(produto);
+
+jQuery('#Prod').val(parseFloat(resultProd).toFixed(2));
+});
+});
+
+/* Cubas */
+jQuery(document).ready(function () {
+jQuery('input').on('keyup', function () {
+if (jQuery(this).attr('name4') === 'result4') {
+return false;
+}
+
+/* ####### troca virgula por ponto ############# */
+$('input[type="text"]').each(function () {
+var valc = $(this).val().replace(',', '.');
+$(this).val(valc);
+});
+/* ############################################# */
+
+var cuba = (jQuery('#cuba').val() == '' ? 0 : jQuery('#cuba')
+.val());
+
+
+// use parseFloat 
+var resultCuba = parseFloat(cuba);
+
+jQuery('#Cuba').val(parseFloat(resultCuba).toFixed(2));
+});
+});
+
+
+/* Calcular tudo */
+$(document).ready(function () {
+$("#somar").click(function () {
+var total = 0;
+
+$('input[type=text].form-control-lg').each(function () {
+var valor = Number($(this).val());
+if (!isNaN(valor)) total += valor;
+});
+total = total;
+total = total.toLocaleString('pt-br', {
+style: 'currency',
+currency: 'BRL'
+});
+$("#resultado").val(total);
+});
+});
+</script>

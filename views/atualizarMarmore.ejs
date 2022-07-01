@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- meta charset -->
+    <meta charset="utf-8">
+    <!-- site title -->
+    <title>Stone Cliente</title>
+    <!-- meta description -->
+    <meta name="description" content="">
+    <!-- mobile viwport meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fevicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- ================================
+        CSS Files
+        ================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/system/css/themefisher-fonts.min.css">
+    <link rel="stylesheet" href="/system/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/system/css/main.css">
+    <link rel="stylesheet" href="/system/css/client.css">
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+    </div>
+
+    <main class="site-wrapper">
+        <div class="pt-table">
+            <div class="pt-tablecell page-about relative">
+                <!-- .close -->
+                <a href="/menu" class="page-close"><i class="tf-ion-close"></i></a>
+                <!-- /.close -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                            <div class="page-title text-center">
+                                <h2>Mármores e <span class="primary">Granitos</span> <span class="title-bg">Stone</span></h2>
+                                <p>Editar item.</p>
+                            </div>
+                        </div>
+                    </div> <!-- /.row -->
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Editar Mármore e Granito</div>
+
+                        <div class="panel-body">
+                            <form class="row g-3" action="" method="post">
+                          
+                                <div class="col-md-4">
+                                    <label for="inputPassword4" class="form-label">Tipo de material</label>
+                                    <div class="form-floating">
+                                        <select class="form-select" id="floatingSelect" name="tipo" aria-label="Floating label select example">
+                                          <option selected>Escolha o material</option>
+                                          <option value="Mármore">Mármore</option>
+                                          <option value="Granito">Granito</option>
+                                        </select>                         
+                                      </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationTextarea" class="form-label">Descrição</label>
+                                    <textarea class="form-control is-invalid"  name="descricao" id="validationTextarea"
+                                        placeholder="" required><%=marmore.descricao%></textarea>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="inputEmail4" class="form-label">Valor/m²</label>
+                                    <input type="number" class="form-control" value="<%=marmore.valor%>" name="valor" id="inputEmail4">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <br>
+                                    <button type="submit" class="btn btn-success">Salvar</button>
+                                    <a href="/marmore" class="btn btn-danger">Cancelar</a>
+                                    
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                
+                </div> <!-- /.pt-tablecell -->
+                
+            </div> <!-- /.pt-table -->
+        </div>
+    </main> <!-- /.site-wrapper -->
+
+    <!-- ================================
+        JavaScript Libraries
+        ================================= -->
+    <script src="/system/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/system/js/vendor/bootstrap.min.js"></script>
+    <script src="/system/js/jquery.easing.min.js"></script>
+    <script src="/system/js/isotope.pkgd.min.js"></script>
+    <script src="/system/js/jquery.nicescroll.min.js"></script>
+    <script src="/system/js/owl.carousel.min.js"></script>
+    <script src="/system/js/jquery-validation.min.js"></script>
+    <script src="/system/js/main.js"></script>
+</body>
+
+</html>

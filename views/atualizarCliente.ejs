@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- meta charset -->
+    <meta charset="utf-8">
+    <!-- site title -->
+    <title>Stone Cliente</title>
+    <!-- meta description -->
+    <meta name="description" content="">
+    <!-- mobile viwport meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fevicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- ================================
+        CSS Files
+        ================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/system/css/themefisher-fonts.min.css">
+    <link rel="stylesheet" href="/system/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/system/css/main.css">
+    <link rel="stylesheet" href="/system/css/client.css">
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+        <div class="loading-mask"></div>
+    </div>
+
+    <main class="site-wrapper">
+        <div class="pt-table">
+            <div class="pt-tablecell page-about relative">
+                <!-- .close -->
+                <a href="/cliente" class="page-close"><i class="tf-ion-close"></i></a>
+                <!-- /.close -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                            <div class="page-title text-center">
+                                <h2>meus<span class="primary">Clientes</span> <span class="title-bg">Stone</span></h2>
+                                <p>Atualizar cliente</p>
+                            </div>
+                        </div>
+                    </div> <!-- /.row -->
+
+
+                    <form class="form-horizontal" action="" method="post">
+                        <fieldset>
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">ATUALIZAR CLIENTE</div>
+
+                                <div class="panel-body">
+                                    <div class="btn-cadcliente">
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-11 control-label">
+                                            <p class="help-block">
+                                                <h11>*</h11> Campo Obrigatório
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="Nome">Nome completo <h11>*</h11>
+                                            </label>
+                                        <div class="col-md-8">
+                                            <input id="Nome" name="nome" placeholder="Insira o nome "
+                                                class="form-control input-md" value="<%=cliente.nome%>" type="text"
+                                                required="Digite o nome">
+                                        </div>
+                                    </div>
+                                    <!-- Text input-->
+
+
+                                    <!-- Text input-->
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="Nome">CPF <h11>*</h11></label>
+                                        <div class="col-md-2">
+                                            <input id="cpf" name="cpf" placeholder="Apenas números"
+                                                class="form-control input-md" value="<%=cliente.cpf%>" required=""
+                                                type="text" maxlength="11" pattern="[0-9]+$">
+
+                                        </div>
+
+                                        <label class="col-md-2 control-label" for="Nome">Tipo de Pessoa<h11>*</h11>
+                                        </label>
+                                        <div class="col-md-2">
+                                            <input id="cep" name="tipodepessoa" placeholder="PF/PJ"
+                                                class="form-control input-md" value="<%=cliente.tipodepessoa%>"
+                                                required="" value="" type="text">
+
+                                        </div>
+
+                                        <label class="col-md-1 control-label" for="Nome">Nasc<h11>*</h11>
+                                        </label>
+                                        <div class="col-md-2">
+                                            <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA"
+                                                class="form-control input-md" required="" type="text" maxlength="10"
+                                                OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()"
+                                                value="<%=cliente.dtnasc%>">
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Prepended text-->
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="prependedtext">Telefone <h11>*
+                                            </h11></label>
+                                        <div class="col-md-2">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i
+                                                        class="glyphicon glyphicon-earphone"></i></span>
+                                                <input id="prependedtext" name="telefone" class="form-control"
+                                                    placeholder="XX XXXXX-XXXX" required="" type="text" maxlength="13"
+                                                    pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+                                                    OnKeyPress="formatar('## #####-####', this)"
+                                                    value="<%=cliente.telefone%>">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Prepended text-->
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="prependedtext">Email<h11>*</h11>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i
+                                                        class="glyphicon glyphicon-envelope"></i></span>
+                                                <input id="prependedtext" name="email" class="form-control"
+                                                    placeholder="email@email.com" required="" type="text"
+                                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                                    value="<%=cliente.email%>">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Search input-->
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="CEP">CEP <h11>*</h11></label>
+                                        <div class="col-md-2">
+                                            <input id="cep" name="cep" placeholder="Apenas números"
+                                                class="form-control input-md" required="" type="search" maxlength="8"
+                                                pattern="[0-9]+$" value="<%=cliente.cep%>">
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Prepended text-->
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="prependedtext">Endereço</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Rua</span>
+                                                <input id="rua" name="endereco" class="form-control" placeholder=""
+                                                    required="" type="text" value="<%=cliente.endereco%>">
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Nº <h11>*</h11></span>
+                                                <input id="numero" name="numero" class="form-control" placeholder=""
+                                                    required="" type="text" value="<%=cliente.numero%>">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Bairro</span>
+                                                <input id="bairro" name="bairro" class="form-control" placeholder=""
+                                                    required="" type="text" value="<%=cliente.bairro%>">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="prependedtext"></label>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Cidade</span>
+                                                <input id="cidade" name="cidade" class="form-control" placeholder=""
+                                                    required="" type="text" value="<%=cliente.cidade%>">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Estado</span>
+                                                <input id="estado" name="estado" class="form-control" placeholder=""
+                                                    required="" type="text" value="<%=cliente.estado%>">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Button (Double) -->
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="Cadastrar"></label>
+                                        <div class="col-md-8">
+                                            <button id="Cadastrar" class="btn btn-success" type="submit">Salvar</button>
+                                            <a href="/cliente" class="btn btn-danger">Cancelar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+                    </form>
+
+
+                    <div class="row">
+
+                    </div>
+                </div> <!-- /.pt-tablecell -->
+            </div> <!-- /.pt-table -->
+        </div>
+    </main> <!-- /.site-wrapper -->
+
+    <!-- ================================
+        JavaScript Libraries
+        ================================= -->
+    <script src="/system/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/system/js/vendor/bootstrap.min.js"></script>
+    <script src="/system/js/jquery.easing.min.js"></script>
+    <script src="/system/js/isotope.pkgd.min.js"></script>
+    <script src="/system/js/jquery.nicescroll.min.js"></script>
+    <script src="/system/js/owl.carousel.min.js"></script>
+    <script src="/system/js/jquery-validation.min.js"></script>
+    <script src="/system/js/main.js"></script>
+</body>
+
+</html>
